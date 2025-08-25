@@ -5,7 +5,13 @@ const countrySelect = document.getElementById('countryCode') as HTMLSelectElemen
 const generateBtn = document.getElementById('generateBtn') as HTMLButtonElement
 const resultDiv = document.getElementById('result') as HTMLDivElement
 
+window.onload = generateIban
+
 generateBtn.addEventListener('click', () => {
+  generateIban()
+})
+
+function generateIban(){
   try {
     const countryCode = countrySelect.value as CountryCode
 
@@ -17,4 +23,4 @@ generateBtn.addEventListener('click', () => {
     resultDiv.textContent = 'Error generating IBAN'
     resultDiv.style.color = '#ef4444' // Error red color
   }
-})
+}
