@@ -22,12 +22,12 @@ const BANK_CODES: Record<string, string[]> = {
     '10070000', // Deutsche Bank
   ],
   GB: [
-    '040004', // HSBC
-    '040005', // HSBC
-    '040010', // Lloyds
-    '040012', // Barclays
-    '040014', // NatWest
-    '040015', // Royal Bank of Scotland
+    'HSBC', // HSBC
+    'HBUK', // HSBC UK
+    'LOYD', // Lloyds
+    'BARC', // Barclays
+    'NWBK', // NatWest
+    'RBOK', // Royal Bank of Scotland
   ],
   ES: [
     '0001', // Banco de España
