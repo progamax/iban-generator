@@ -1,13 +1,45 @@
 export const BANK_CODES = {
   FR: [
-    { code: '30003', bank: 'Société Générale' },
-    { code: '30004', bank: 'BNP Paribas' },
-    { code: '20041', bank: 'La Banque Postale' },
-    { code: '10278', bank: 'Crédit Mutuel' },
-    { code: '30002', bank: 'Crédit Agricole' },
-    { code: '10096', bank: 'Société Marseillaise de Crédit' }, // SMC
-    { code: '30066', bank: 'CIC' },
-    { code: '10107', bank: 'Bred Alloc (Banque Populaire)' }
+    { 
+      code: '30003', 
+      bank: 'Société Générale',
+      guichets: ['02290', '01430', '00800', '00001']
+    },
+    { 
+      code: '30004', 
+      bank: 'BNP Paribas',
+      guichets: ['00825', '00274', '00813', '00804'] 
+    },
+    { 
+      code: '20041', 
+      bank: 'La Banque Postale',
+      guichets: ['01012', '00001', '01005'] 
+    },
+    { 
+      code: '10278', 
+      bank: 'Crédit Mutuel',
+      guichets: ['03005', '03010', '01055'] 
+    },
+    { 
+      code: '30002', 
+      bank: 'LCL (Crédit Lyonnais)', // 30002 is LCL, not CA
+      guichets: ['00561', '00800', '00735', '02380'] 
+    },
+    { 
+      code: '10096', 
+      bank: 'Société Marseillaise de Crédit', // SMC
+      guichets: ['00001', '00034'] // Generic fallback
+    },
+    { 
+      code: '30066', 
+      bank: 'CIC',
+      guichets: ['00025', '10916', '10949', '10864'] 
+    },
+    { 
+      code: '10107', 
+      bank: 'Bred Alloc (Banque Populaire)',
+      guichets: ['00622', '00118', '00157', '00126'] 
+    }
   ],
   BE: [
     { code: '001', bank: 'BNP Paribas Fortis' }, // BEkk 001x xxxx xxkk

@@ -10,7 +10,13 @@ export function generateFR() {
     const bankCode = bankObj.code;
     
     // 2. Generate Guichet (5 digits)
-    const guichetCode = generateRandomNumericString(5);
+    let guichetCode;
+    if (bankObj.guichets && bankObj.guichets.length > 0) {
+        guichetCode = bankObj.guichets[Math.floor(Math.random() * bankObj.guichets.length)];
+    } else {
+        // Fallback for banks where we haven't researched guichets yet (though we researched most)
+        guichetCode = generateRandomNumericString(5);
+    }
     
     // 3. Generate Account (11 digits)
     const accountCode = generateRandomNumericString(11); 
